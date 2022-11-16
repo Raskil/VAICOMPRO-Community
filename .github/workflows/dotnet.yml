@@ -3,6 +3,9 @@
 
 name: .NET
 
+env:
+  PROJECT_NAME: VAICOM
+
 on:
   push:
     branches: [ "Open-Beta" ]
