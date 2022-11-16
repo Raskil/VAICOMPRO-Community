@@ -8,6 +8,8 @@ on:
     branches: [ "Open-Beta" ]
   pull_request:
     branches: [ "Open-Beta" ]
+  workflow_dispatch:
+  
 
 jobs:
   build:
