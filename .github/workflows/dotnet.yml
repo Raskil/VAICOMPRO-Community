@@ -5,6 +5,7 @@ name: .NET
 
 env:
   PROJECT_NAME: VAICOM
+  SOLUTION_NAME: VAICOM28.sln
 
 on:
   push:
@@ -30,7 +31,7 @@ jobs:
     - name: setup-msbuild
       uses: microsoft/setup-msbuild@v1.1
     - name: Restore Packages
-      run: nuget restore MySolution.sln
+      run: nuget restore $SOLUTION_NAME
     - name: Build solution
-      run: msbuild MySolution.sln -t:rebuild -property:Configuration=Release
+      run: msbuild $SOLUTION_NAME -t:rebuild -property:Configuration=Release
 
